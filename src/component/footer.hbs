@@ -1,0 +1,16 @@
+<hr>
+<dir>
+    {{#with social}}
+    {{>link href=email.href text=email.text blank=true }}
+    {{>link href=phone.href text=phone.text blank=true }}
+    {{>link href=linkedIn.href text=linkedIn.text blank=true noLine=true}}
+    {{/with}}
+</dir>
+<br>
+<dir>
+    <em>Copyright by {{firstname}} {{lastname}} </em>
+</dir>
+<br>
+<div>
+    <address>{{address}} </address>
+</div>
