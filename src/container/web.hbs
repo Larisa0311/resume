@@ -1,0 +1,65 @@
+<div>
+    {{#with web}}
+    <ul>
+        {{>title big=true data="Languages:"}}
+
+        {{#each languages}}
+        <li>
+            <p>Name: <b> {{name}} </b> Version: <b>{{version}} </b> </p>
+            <p><q> {{description}} </q></p>
+
+            <ul>
+                {{#each elements}}
+
+                <li>
+                    <p>Element: <b> {{name}} </b> </p>
+                    <em>{{description}} </em>
+                </li>
+                <ul>
+                    <p>Attributes:</p>
+                    {{#each attributes}}
+                    <li>
+                        <p><b> {{name}} </b></p> {{description}}
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </ul>
+
+            <ul>
+                {{#each properties}}
+                <li>
+                    <p>Propertie: <b> {{name}} </b></p> <em>{{description}}</em>
+                </li>
+                <ul>
+                    <p>Values:</p>
+                    {{#each values}}
+                    <li>
+                        <p><b> {{value}} </b> {{description}} </p>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </ul>
+
+            <ul>
+                {{#each functions}}
+                <li>
+                    <p>Function: <b> {{name}} </b></p> <em> {{description}} </em>
+                </li>
+                <ul>
+                    <p>Parameters:</p>
+                    {{#each parameters}}
+                    <li>
+                        <p><b> {{name}} </b> <em>( {{type}} ) </em> {{description}} </p>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </ul>
+            <br>
+        </li>
+        {{/each}}
+    </ul>
+    {{/with}}
+</div>
