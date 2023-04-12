@@ -1,0 +1,134 @@
+<div>
+    <h1> <span class="badge bg-secondary"> {{make}} {{model}} {{year}} </span></h1>
+    <h2> <span class="badge bg-secondary"> Color: {{color}} </span></h2>
+
+    <h2> <span class="badge bg-secondary"> Features: </span></h2>
+
+    {{#with features}}
+    <h3> <span class="badge bg-secondary"> Interior: </span></h3>
+
+    {{#with interior }}
+    <h4> <span class="badge bg-secondary"> Seats: </span></h4>
+    {{#with seats}}
+    <p>material: {{material}}</p>
+    <p> color: {{color}}</p>
+    {{#if heated}}<p> heated</p>{{/if}}
+    {{#if ventilated}}<p> ventilated</p>{{/if}}
+    {{/with}}
+    <br>
+
+    <h4> <span class="badge bg-secondary"> Dashboard: </span></h4>
+    {{#with dashboard}}
+    <p>material: {{material}}</p>
+    <p> color: {{color}}</p>
+    <h5> <span class="badge bg-secondary"> Display: </span></h5>
+
+    {{#with display}}
+    <p>type: {{type}}</p>
+    <p>size: {{size}}</p>
+    <p>resolution: {{resolution}}</p>
+    {{#if touchscreen}} <p>touchscreen</p>{{/if}}
+    {{/with}}
+    {{/with}}
+    <br>
+
+    <h4> <span class="badge bg-secondary"> Audio: </span></h4>
+    {{#with audio}}
+    <p>system: {{system}}</p>
+    <p> speaker: {{speakers}}</p>
+    {{#if subwoofer}}<p> subwoofer</p>{{/if}}
+    {{#if bluetooth}}<p> bluetooth</p>{{/if}}
+    {{#if USB}}<p> USB</p>{{/if}}
+    {{/with}}
+    <br>
+    {{/with}}
+
+    <h3> <span class="badge bg-secondary"> Exterior: </span></h3>
+    {{#with exterior }}
+
+    <h4> <span class="badge bg-secondary"> Wheels: </span></h4>
+    {{#with wheels}}
+    <p>size: {{size}} </p>
+    <p>type: {{type}}</p>
+    <p> color: {{color}}</p>
+    {{/with}}
+    <br>
+
+    <h4> <span class="badge bg-secondary"> Headlights: </span></h4>
+    {{#with headlights}}
+    <p>type: {{type}}</p>
+    <p> brightness: {{brightness}}</p>
+    {{#if automatic}} <p>automatic</p> {{/if}}
+    {{/with}}
+    <br>
+
+    <h4> <span class="badge bg-secondary"> Sunroof: </span></h4>
+    {{#with sunroof}}
+    <p>type: {{type}}</p>
+    <p>size: {{size}} </p>
+    {{#if automatic}} <p>automatic</p> {{/if}}
+    {{/with}}
+    <br>
+    {{/with}}
+
+    <h3> <span class="badge bg-secondary"> Safety: </span></h3>
+    {{#with safety }}
+    <h4> <span class="badge bg-secondary"> Airbags: </span></h4>
+    {{#with airbags}}
+    <p>front: {{front}}</p>
+    <p>side: {{side}} </p>
+    <p>knee: {{knee}} </p>
+    <p>rear: {{rear}} </p>
+    {{/with}}
+    <br>
+
+    <h4> <span class="badge bg-secondary"> Assistance: </span></h4>
+    {{#with assistance}}
+    {{#if blind_spot_monitoring}} <p>blind_spot_monitoring</p> {{/if}}
+    {{#if rear_cross_traffic_alert}} <p>rear_cross_traffic_alert</p> {{/if}}
+    {{#if lane_departure_warning}} <p>lane_departure_warning</p> {{/if}}
+    {{#if adaptive_cruise_control}} <p>adaptive_cruise_control</p> {{/if}}
+    {{#if collision_warning}} <p> collision_warning</p> {{/if}}
+    {{/with}}
+    <br>
+
+    {{/with}}
+
+    {{/with}}
+
+    <h2> <span class="badge bg-secondary"> Engine: </span></h2>
+    {{#with engine}}
+    <p>type: {{type}}</p>
+    <p>displacement: {{displacement}}</p>
+    <p>horsepower: {{horsepower}}</p>
+    <p>torque: {{torque}}</p>
+    <h5> <span class="badge bg-secondary"> Transmission: </span></h5>
+    <p>type: {{transmission.type}} </p>
+    <p>gears: {{transmission.gears}} </p>
+    {{/with}}
+    <br>
+
+    <h2> <span class="badge bg-secondary"> Fuel_economy: </span></h2>
+    {{#with fuel_economy}}
+    <p>city: {{city}}</p>
+    <p>highway: {{highway}}</p>
+    <p>combined: {{combined}}</p>
+    {{/with}}
+    <br>
+
+    <h2> <span class="badge bg-secondary"> Price: </span></h2>
+    {{#with price}}
+    <p>base: {{base}}</p>
+    <p>destination: {{destination}}</p>
+    <h5> <span class="badge bg-secondary"> Options: </span></h5>
+    {{#with options}}
+    <p>navigation: {{navigation}} </p>
+    <p>moonroof: {{moonroof}} </p>
+    <p> premium_paint: {{ premium_paint}} </p>
+    {{/with}}
+    <p><b>Total: {{total}} </b></p>
+
+    {{/with}}
+
+
+</div>
