@@ -1,0 +1,92 @@
+<div>
+    <h1>{{name}} <span class="badge bg-secondary"> Users:</span></h1>
+    {{#each users}}
+    <ul>
+        <li>
+            <h2> <span class="badge bg-secondary"> {{name}}</span></h2>
+            ID: {{id}}, Gender: {{gender}}, Age: {{age}}
+        </li>
+
+        <ul>
+            <h2> <span class="badge bg-secondary"> Friends:</span></h2>
+            {{#each friends}}
+            <li>
+                <h3> <span class="badge bg-secondary"> {{name}}</span></h3>
+                ID: {{id}}, Gender: {{gender}}, Age: {{age}}
+            </li>
+
+            <ul>
+                <h3> <span class="badge bg-secondary"> Mutual friends:</span></h3>
+                {{#each mutual_friends }}
+                <li>
+                    <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                    ID: {{id}}, Gender: {{gender}}, Age: {{age}}
+                </li>
+
+                {{#if mutual_friends }}
+                <ul>
+                    <h4> <span class="badge bg-secondary"> Mutual friends:</span></h4>
+                    {{#each mutual_friends }}
+                    <li>
+                        <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                        ID: {{id}}, Gender: {{gender}}, Age: {{age}}
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+                {{/each}}
+            </ul>
+
+            {{#if groups}}
+            <ul>
+                <h3> <span class="badge bg-secondary"> Groups:</span></h3>
+                {{#each groups }}
+                <li>
+                    <h3> <span class="badge bg-secondary"> {{name}}</span></h3>
+                    ID: {{id}}, {{description}}
+                </li>
+                <ul>
+                    <h3> <span class="badge bg-secondary"> Members:</span></h3>
+                    {{#each members }}
+                    <li>
+                        <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                        ID: {{id}}, Gender: {{gender}}, Age: {{age}}
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </ul>
+            {{/if}}
+
+            {{/each}}
+        </ul>
+        <br>
+        <br>
+
+        {{#if groups}}
+        <ul>
+            <h2> <span class="badge bg-secondary"> Groups:</span></h2>
+            {{#each groups}}
+            <li>
+                <h3> <span class="badge bg-secondary"> {{name}}</span></h3>
+                ID: {{id}}, {{description}}
+            </li>
+            <ul>
+                <h3> <span class="badge bg-secondary"> Members:</span></h3>
+                {{#each members }}
+                <li>
+                    <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                    ID: {{id}}, Gender: {{gender}}, Age: {{age}}
+                </li>
+                {{/each}}
+            </ul>
+            {{/each}}
+        </ul>
+        <br>
+        {{/if}}
+
+    </ul>
+    <br>
+    {{/each}}
+</div>
