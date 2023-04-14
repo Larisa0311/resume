@@ -2,30 +2,30 @@
     {{#with main}}
     <main>
         <section>
-            {{!-- {{#with educations}} --}}
+
             {{>title big=true data= 'My education' }}
             <ul>
                 {{#each educations}}
-                <li>
+                <li class="ps-3">
                     {{name}}
                     {{#unless isEnd}} (ще в процесі) {{/unless}}
                 </li>
                 {{/each}}
             </ul>
-            {{!-- {{/with}} --}}
+
         </section>
         <section>
-            {{!-- {{#with certificates}} --}}
+
             {{>title data='My certificates' }}
             <ul>
                 {{#each certificates}}
-                <li>
+                <li class="ps-3">
                     {{name}}
                     ({{id}})
                 </li>
                 {{/each}}
             </ul>
-            {{!-- {{/with}} --}}
+
         </section>
     </main>
     {{/with}}
