@@ -1,19 +1,6 @@
 <main>
     <div class="row">
 
-        <div class="col-12 mx-1 my-3">
-            <div class="nav nav-tabs">
-                {{#with navigation}}
-                {{#each links}}
-                <div class="nav-item">
-                    <a href="{{href}}" class="nav-link"> {{text}} </a>
-                </div>
-                {{/each}}
-                <a href="#" class="nav-link disabled">Disabled</a>
-                {{/with}}
-            </div>
-        </div>
-
         <div class="col-12">
             <div class="row">
                 {{#with newsBlock}}
@@ -52,28 +39,7 @@
                 {{/each}}
 
                 <div class="col-12 mt-4 mb-2">
-                    <div class="row">
-                        {{#each cards}}
-                        <div class="col-4 mb-2">
-                            <div class="card">
-                                <img class="card-img-top text-br-secondary" src="{{image}}">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        <h6> {{title}}
-                                            {{#if isHot}}
-                                            <span class="badge text-bg-warning rounded-pill text-uppercase">Hot!</span>
-                                            {{/if}}
-                                            {{#if isNew}}
-                                            <span class="badge text-bg-primary rounded-pill">New</span>
-                                            {{/if}}
-                                        </h6>
-                                    </div>
-                                    <p class="p-0"> {{description}} </p>
-                                </div>
-                            </div>
-                        </div>
-                        {{/each}}
-                    </div>
+                    {{>shopcard cards=cards}}
                 </div>
                 {{/with}}
             </div>
@@ -92,38 +58,8 @@
         </div>
         <hr>
 
-        <div class="col-12 mt-5 mb-5">
-            {{#with service}}
-            <div class="card text-bg-success">
-                <div class="card-body text-center">
-                    <h2 class="m-2"> {{title}} </h2>
-                    <p class="m-2"> {{description}} </p>
-                    {{#each buttons}}
-                    <a class="btn btn-primary col-2 m-2" href="{{link}}"> {{text}} </a>
-                    {{/each}}
-                </div>
-            </div>
-            {{/with}}
-        </div>
-        <hr>
+        {{>shopaction service=shopaction.service}}
 
-        <div class="col-12">
-            <div class="nav nav-tabs">
-                {{#each footer}}
-
-                <ul class="nav flex-column m-4">
-                    {{#each this}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{link}}"> {{text}} </a>
-                    </li>
-                    {{/each}}
-                    <li><a href="#" class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-
-                {{/each}}
-            </div>
-        </div>
 
     </div>
 </main>
