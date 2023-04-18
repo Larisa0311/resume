@@ -1,0 +1,17 @@
+<div class="col-12">
+    <div class="nav nav-tabs">
+        {{#each footer}}
+
+        <ul class="nav flex-column m-4">
+            {{#each this}}
+            <li class="nav-item">
+                <a class="nav-link" href="{{link}}"> {{text}} </a>
+            </li>
+            {{/each}}
+            <li><a href="#" class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+
+        {{/each}}
+    </div>
+</div>

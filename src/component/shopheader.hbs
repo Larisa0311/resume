@@ -1,0 +1,12 @@
+<div class="col-12 mx-1 my-3">
+    <div class="nav nav-tabs">
+        {{#with navigation}}
+        {{#if img}} <img crs="{{img}}">{{/if}}
+        {{#each links}} <div class="nav-item">
+            <a href="{{href}}" class="nav-link"> {{text}} </a>
+        </div>
+        {{/each}}
+        <a href="#" class="nav-link disabled">Disabled</a>
+        {{/with}}
+    </div>
+</div>
