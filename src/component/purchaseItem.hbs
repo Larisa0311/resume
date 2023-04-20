@@ -1,0 +1,31 @@
+<table class="table mt-5 mb-5">
+    <tbody>
+        {{#each itemList}}
+        <tr>
+
+            <td class="m-2">
+                <p> {{number}} </p>
+                <h5> {{status}} </h5>
+            </td>
+
+            <td class="m-2">
+                <p> {{amount.title}} </p>
+                <h5> {{amount.value}} </h5>
+            </td>
+
+            <td class="p-2">
+                {{#each images}}
+                <img src="{{this}}">
+                {{/each}}
+            </td>
+
+            <td class="">
+                {{#with button}}
+                <a class="btn {{#if isPrimary}}btn-primary{{/if}}" href="{{link}}"> {{text}} </a>
+                {{/with}}
+            </td>
+
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
