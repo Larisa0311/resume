@@ -1,14 +1,14 @@
 <div>
-    <h1>{{name}} <span class="badge bg-secondary"> Users:</span></h1>
+    <h1>{{name}} <span> Users:</span></h1>
     {{#each users}}
     <ul>
         <li>
-            <h2> <span class="badge bg-secondary"> {{name}}</span></h2>
+            <h2> <span class="badge bg-primary"> {{name}}</span></h2>
             ID: {{id}}, Gender: {{gender}}, Age: {{age}}
         </li>
 
         <ul>
-            <h2> <span class="badge bg-secondary"> Friends:</span></h2>
+            <h2> <span class="text-primary"> Friends:</span></h2>
             {{#each friends}}
             <li>
                 <h3> <span class="badge bg-secondary"> {{name}}</span></h3>
@@ -16,19 +16,19 @@
             </li>
 
             <ul>
-                <h3> <span class="badge bg-secondary"> Mutual friends:</span></h3>
+                <h3> <span class="text-secondary"> Mutual friends:</span></h3>
                 {{#each mutual_friends }}
                 <li>
-                    <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                    <h4> <span class="badge bg-success"> {{name}}</span></h4>
                     ID: {{id}}, Gender: {{gender}}, Age: {{age}}
                 </li>
 
                 {{#if mutual_friends }}
                 <ul>
-                    <h4> <span class="badge bg-secondary"> Mutual friends:</span></h4>
+                    <h4> <span class="text-success"> Mutual friends:</span></h4>
                     {{#each mutual_friends }}
                     <li>
-                        <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                        <h4> <span class="badge bg-warning"> {{name}}</span></h4>
                         ID: {{id}}, Gender: {{gender}}, Age: {{age}}
                     </li>
                     {{/each}}
@@ -40,17 +40,17 @@
 
             {{#if groups}}
             <ul>
-                <h3> <span class="badge bg-secondary"> Groups:</span></h3>
+                <h3> <span class="text-secondary"> Groups:</span></h3>
                 {{#each groups }}
                 <li>
                     <h3> <span class="badge bg-secondary"> {{name}}</span></h3>
                     ID: {{id}}, {{description}}
                 </li>
                 <ul>
-                    <h3> <span class="badge bg-secondary"> Members:</span></h3>
+                    <h4> <span class="text-success"> Members:</span></h4>
                     {{#each members }}
                     <li>
-                        <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
+                        <h4> <span class="badge bg-success"> {{name}}</span></h4>
                         ID: {{id}}, Gender: {{gender}}, Age: {{age}}
                     </li>
                     {{/each}}
@@ -66,14 +66,14 @@
 
         {{#if groups}}
         <ul>
-            <h2> <span class="badge bg-secondary"> Groups:</span></h2>
+            <h2> <span> Groups:</span></h2>
             {{#each groups}}
             <li>
-                <h3> <span class="badge bg-secondary"> {{name}}</span></h3>
+                <h3> <span class="badge bg-primary"> {{name}}</span></h3>
                 ID: {{id}}, {{description}}
             </li>
             <ul>
-                <h3> <span class="badge bg-secondary"> Members:</span></h3>
+                <h3> <span class="text-primary"> Members:</span></h3>
                 {{#each members }}
                 <li>
                     <h4> <span class="badge bg-secondary"> {{name}}</span></h4>
