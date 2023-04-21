@@ -2379,7 +2379,10 @@ router.get('/shopprofile', function (req, res) {
           },
         ],
       },
-=======
+    },
+  })
+})
+//============================================================
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -2519,7 +2522,6 @@ router.get('/shopcart', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 
 module.exports = router
