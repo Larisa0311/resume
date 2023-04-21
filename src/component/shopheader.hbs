@@ -3,10 +3,9 @@
         {{#with navigation}}
         {{#if img}} <img crs="{{img}}">{{/if}}
         {{#each links}} <div class="nav-item">
-            <a href="{{href}}" class="nav-link"> {{text}} </a>
+            <a href="{{href}}" class="nav-link {{#if @last}} disabled {{/if}}"> {{text}} </a>
         </div>
         {{/each}}
-        <a href="#" class="nav-link disabled">Disabled</a>
         {{/with}}
     </div>
 </div>
