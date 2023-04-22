@@ -1,14 +1,14 @@
-<div>
-    <h1> <span class="badge bg-secondary"> {{make}} {{model}} {{year}} </span></h1>
-    <h2> <span class="badge bg-secondary"> Color: {{color}} </span></h2>
+<div class="card ms-2">
+    <h1> <span class=""> {{make}} {{model}} {{year}} </span></h1>
+    <h2> <span class=""> Color: {{color}} </span></h2>
 
-    <h2> <span class="badge bg-secondary"> Features: </span></h2>
+    <h2> <span class=""> Features: </span></h2>
 
     {{#with features}}
-    <h3> <span class="badge bg-secondary"> Interior: </span></h3>
+    <h3> <span class="text-primary"> Interior: </span></h3>
 
     {{#with interior }}
-    <h4> <span class="badge bg-secondary"> Seats: </span></h4>
+    <h4> <span class="text-secondary"> Seats: </span></h4>
     {{#with seats}}
     <p>material: {{material}}</p>
     <p> color: {{color}}</p>
@@ -17,11 +17,11 @@
     {{/with}}
     <br>
 
-    <h4> <span class="badge bg-secondary"> Dashboard: </span></h4>
+    <h4> <span class="text-secondary"> Dashboard: </span></h4>
     {{#with dashboard}}
     <p>material: {{material}}</p>
     <p> color: {{color}}</p>
-    <h5> <span class="badge bg-secondary"> Display: </span></h5>
+    <h5> <span class="text-success"> Display: </span></h5>
 
     {{#with display}}
     <p>type: {{type}}</p>
@@ -32,7 +32,7 @@
     {{/with}}
     <br>
 
-    <h4> <span class="badge bg-secondary"> Audio: </span></h4>
+    <h4> <span class="text-secondary"> Audio: </span></h4>
     {{#with audio}}
     <p>system: {{system}}</p>
     <p> speaker: {{speakers}}</p>
@@ -43,10 +43,10 @@
     <br>
     {{/with}}
 
-    <h3> <span class="badge bg-secondary"> Exterior: </span></h3>
+    <h3> <span class="text-primary"> Exterior: </span></h3>
     {{#with exterior }}
 
-    <h4> <span class="badge bg-secondary"> Wheels: </span></h4>
+    <h4> <span class="text-secondary"> Wheels: </span></h4>
     {{#with wheels}}
     <p>size: {{size}} </p>
     <p>type: {{type}}</p>
@@ -54,7 +54,7 @@
     {{/with}}
     <br>
 
-    <h4> <span class="badge bg-secondary"> Headlights: </span></h4>
+    <h4> <span class="text-secondary"> Headlights: </span></h4>
     {{#with headlights}}
     <p>type: {{type}}</p>
     <p> brightness: {{brightness}}</p>
@@ -62,7 +62,7 @@
     {{/with}}
     <br>
 
-    <h4> <span class="badge bg-secondary"> Sunroof: </span></h4>
+    <h4> <span class="text-secondary"> Sunroof: </span></h4>
     {{#with sunroof}}
     <p>type: {{type}}</p>
     <p>size: {{size}} </p>
@@ -71,9 +71,9 @@
     <br>
     {{/with}}
 
-    <h3> <span class="badge bg-secondary"> Safety: </span></h3>
+    <h3> <span class="text-primary"> Safety: </span></h3>
     {{#with safety }}
-    <h4> <span class="badge bg-secondary"> Airbags: </span></h4>
+    <h4> <span class="text-secondary"> Airbags: </span></h4>
     {{#with airbags}}
     <p>front: {{front}}</p>
     <p>side: {{side}} </p>
@@ -82,7 +82,7 @@
     {{/with}}
     <br>
 
-    <h4> <span class="badge bg-secondary"> Assistance: </span></h4>
+    <h4> <span class="text-secondary"> Assistance: </span></h4>
     {{#with assistance}}
     {{#if blind_spot_monitoring}} <p>blind_spot_monitoring</p> {{/if}}
     {{#if rear_cross_traffic_alert}} <p>rear_cross_traffic_alert</p> {{/if}}
@@ -96,19 +96,19 @@
 
     {{/with}}
 
-    <h2> <span class="badge bg-secondary"> Engine: </span></h2>
+    <h2> <span class=""> Engine: </span></h2>
     {{#with engine}}
     <p>type: {{type}}</p>
     <p>displacement: {{displacement}}</p>
     <p>horsepower: {{horsepower}}</p>
     <p>torque: {{torque}}</p>
-    <h5> <span class="badge bg-secondary"> Transmission: </span></h5>
+    <h5> <span class="text-success"> Transmission: </span></h5>
     <p>type: {{transmission.type}} </p>
     <p>gears: {{transmission.gears}} </p>
     {{/with}}
     <br>
 
-    <h2> <span class="badge bg-secondary"> Fuel_economy: </span></h2>
+    <h2> <span class=""> Fuel_economy: </span></h2>
     {{#with fuel_economy}}
     <p>city: {{city}}</p>
     <p>highway: {{highway}}</p>
@@ -116,11 +116,11 @@
     {{/with}}
     <br>
 
-    <h2> <span class="badge bg-secondary"> Price: </span></h2>
+    <h2> <span class=""> Price: </span></h2>
     {{#with price}}
     <p>base: {{base}}</p>
     <p>destination: {{destination}}</p>
-    <h5> <span class="badge bg-secondary"> Options: </span></h5>
+    <h5> <span class="text-success"> Options: </span></h5>
     {{#with options}}
     <p>navigation: {{navigation}} </p>
     <p>moonroof: {{moonroof}} </p>

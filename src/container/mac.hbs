@@ -1,41 +1,46 @@
 <div>
-    <h1> <span class="badge bg-secondary"> {{name}} </span></h1>
-    <h3><span class="badge bg-secondary"> {{description}} </span></h3>
-    <h3> Price: <span class="badge bg-secondary"> {{price}} </span></h3>
-    <h3> <span class="badge bg-secondary"> {{category}} </span></h3>
+    <h1> <span class=""> {{name}} </span></h1>
+    <h3><span class=""> {{description}} </span></h3>
+    <h3> Price: <span class=""> {{price}} </span></h3>
+    <h3> <span class=""> {{category}} </span></h3>
     <hr>
 
-    <h2> <span class="badge bg-secondary"> Features: </span></h2>
+    <h2> <span class="badge bg-primary"> Features: </span></h2>
     {{#with features}}
     <h3> <span class="badge bg-secondary"> Processor: </span></h3>
-    {{#with processor}}
-    <p> {{brand}}, {{model}}, {{speed}}, {{cores}}, {{cache}} </p>
-    {{/with}}
-    <br>
+    <div class="mx-2 my-0">
+        {{#each processor}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
 
     <h3> <span class="badge bg-secondary"> Memory: </span></h3>
-    {{#with memory}}
-    <p> {{type}}, {{size}}, {{speed}} </p>
-    {{/with}}
-    <br>
+    <div class="mx-2 my-0">
+        {{#each memory}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
 
     <h3> <span class="badge bg-secondary"> Storage: </span></h3>
-    {{#with memory}}
-    <p> {{type}}, {{size}} </p>
-    {{/with}}
-    <br>
+    <div class="mx-2 my-0">
+        {{#each storage}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
 
     <h3> <span class="badge bg-secondary"> Display: </span></h3>
-    {{#with display}}
-    <p> {{size}}, {{resolution}}, {{technology}}, {{color_space}}, {{brightness}}, {{ refresh_rate}} </p>
-    {{/with}}
-    <br>
+    <div class="mx-2 my-0">
+        {{#each display}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
 
     <h3> <span class="badge bg-secondary"> Graphics: </span></h3>
-    {{#with graphics}}
-    <p> {{brand}}, {{model}}, {{memory}} </p>
-    {{/with}}
-    <br>
+    <div class="mx-2 my-0">
+        {{#each graphics}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
 
     <h3> <span class="badge bg-secondary"> Ports: </span></h3>
     <ul>
@@ -51,32 +56,33 @@
         </li>
         {{/each}}
     </ul>
-    <br>
 
     <h3> <span class="badge bg-secondary"> Battery: </span></h3>
-    {{#with battery}}
-    <p> {{type}}, {{capacity}}, {{life}} </p>
-    {{/with}}
-    <br>
+    <div class="mx-2 my-0">
+        {{#each battery}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
+
 
     <h3> <span class="badge bg-secondary"> Weight: </span></h3>
-    <p>{{weight}}</p>
-    <br>
+    <p class="mx-2 my-0">{{weight}}</p>
+
 
     <h3> <span class="badge bg-secondary"> Dimensions: </span></h3>
-    {{#with dimensions}}
-    <p> {{height}} x {{width}} x {{depth}} </p>
-    {{/with}}
-    <br>
+    <div class="m-2">
+        {{#each dimensions}}
+        <p>{{@key}}: {{this}}</p>
+        {{/each}}
+    </div>
 
     <h3> <span class="badge bg-secondary"> Operating system: </span></h3>
-    <p>{{operating_system}}</p>
-    <br>
+    <p class="m-2">{{operating_system}}</p>
 
     <h3> <span class="badge bg-secondary"> Accessories: </span></h3>
     <ul>
         {{#each accessories}}
-        <li> {{name}} - {{price}} </li>
+        <li> {{name}} - {{price}} $ </li>
         {{/each}}
     </ul>
 
