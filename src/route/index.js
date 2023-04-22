@@ -2777,6 +2777,8 @@ router.get('/shopcatalog', function (req, res) {
         ],
       },
     ],
+  }),
+})
 //============================================================
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopreview', function (req, res) {
