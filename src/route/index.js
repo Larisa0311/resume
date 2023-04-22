@@ -1309,7 +1309,7 @@ router.get('/bootstrap', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
-    layout: 'basic',
+    layout: 'bootstrap',
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
@@ -2777,7 +2777,7 @@ router.get('/shopcatalog', function (req, res) {
         ],
       },
     ],
-  }),
+  })
 })
 //============================================================
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -2942,7 +2942,6 @@ router.get('/shopreview', function (req, res) {
         },
       },
     ],
-
 
     service: {
       title: 'Our Services',
